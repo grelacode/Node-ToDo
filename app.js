@@ -35,6 +35,6 @@ switch( command ) {
         break;  
     
     default:
-        console.log('comando no reconocido');
+        console.log('Unkown command');
 
 }
