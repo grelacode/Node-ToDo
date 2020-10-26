@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs');
 
 let ToDoList = [];
@@ -22,8 +24,6 @@ const loadDB = () => {
       
 }
 
-
-
 const create = (description) => {
 
     loadDB();
@@ -40,7 +40,6 @@ const create = (description) => {
     return ToDo;
 
     }
-
 
 const getList = () => {
 
@@ -62,9 +61,11 @@ const upDate = (description, completed = true) => {
     } else {
         return false;
     }
+    
 }
 
 const deleteHomework = (description) => {
+    
     loadDB();
 
     let index = ToDoList.findIndex(homework => homework.description === description);
@@ -77,8 +78,6 @@ const deleteHomework = (description) => {
     }
 
 }
-
-
 
 module.exports = {
     create,
