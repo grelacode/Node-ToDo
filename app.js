@@ -19,7 +19,7 @@ switch( command ) {
         for ( let homework of list ) {
             console.log('===== To Do ====='.green);
             console.log(homework.description);
-            console.log('estado: ', homework.completed);
+            console.log('State: ', homework.completed);
             console.log('==========='.green);
         }
         break;    
