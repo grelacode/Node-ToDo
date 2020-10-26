@@ -1,22 +1,21 @@
+'use strict';
+
 const argv = require('./config/yargs').argv;
+
 const ToDo = require('./ToDo/Todo');
-const colors = require('colors')
+const colors = require('colors');
 
-let comando = argv._[0];
+let command = argv._[0];
 
-switch( comando ) {
+switch( command ) {
 
     case 'create':
-
         let homework = ToDo.create( argv.description );
         console.log(homework);
-
     break;
     
     case 'list':
-
         let list = ToDo.getList();
-        
         for ( let homework of list ) {
             console.log('===== To Do ====='.green);
             console.log(homework.description);
